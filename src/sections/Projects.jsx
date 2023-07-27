@@ -12,9 +12,8 @@ const Projects = (props) => {
       as="section"
       p="20px"
       maxW={{ base: "container.lg", "2xl": "container.xl" }}
-      bg="gray.50"
     >
-      <Text sx={captionStyle}>IMPACTFUL, INOVATIVE, CREATIVE</Text>
+      <Text sx={captionStyle}>IMPACTFUL, INNOVATIVE, CREATIVE</Text>
       <Heading as="h2" size="3xl" mb="20px" sx={headingStyle}>
         Projects
       </Heading>
