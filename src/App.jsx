@@ -1,13 +1,17 @@
 import Projects from "./sections/Projects";
 import Education from "./sections/Education";
-import { Container } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import About from "./sections/About";
 function App() {
-  const s = { backgroundColor: "#EDF2F7" };
+  const s = {
+    backgroundColor: "#0B1117",
+  };
   return (
-    <div style={s}>
+    <Box style={s}>
+      <About />
       <Education />
       <Projects />
-    </div>
+    </Box>
   );
 }
 

@@ -1,23 +1,20 @@
 import { Container, Heading, Text } from "@chakra-ui/react";
 import ProjectDisplay from "../components/ProjectDisplay";
+import * as Consts from "../constants.js";
 
 const Projects = (props) => {
-  const captionStyle = { opacity: "85%", fontSize: "md", fontStyle: "italic" };
-  const headingStyle = {
-    textDecoration: "underline",
-    textDecorationColor: "blue.500",
-  };
   return (
     <Container
       as="section"
       p="20px"
+      mb="100px"
       maxW={{ base: "container.lg", "2xl": "container.xl" }}
     >
-      <Text sx={captionStyle}>IMPACTFUL, INNOVATIVE, CREATIVE</Text>
-      <Heading as="h2" size="3xl" mb="20px" sx={headingStyle}>
+      <Text sx={Consts.captionStyle}>IMPACTFUL, INNOVATIVE, CREATIVE</Text>
+      <Heading as="h2" size="4xl" mb="20px" sx={Consts.headingStyle}>
         Projects
       </Heading>
-      <Text opacity="85%" mb="40px" fontSize="md" lineHeight="tall">
+      <Text mb="32px" sx={Consts.bodyTextStyle}>
         Discover a collection of my ongoing and completed projects that
         highlight my expertise, creativity, and dedication to continuous
         learning. From web applications to competitive programming, each project

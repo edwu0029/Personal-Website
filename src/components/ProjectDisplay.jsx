@@ -26,9 +26,9 @@ const ProjectDisplay = (props) => {
       img: "./src/assets/projectDisplayTMP.jpg",
       title: "Project3",
       description:
-        "Lorem ipsum dolor sit\\n\\n amet, consectetur adipiscing elit. Praesent pulvinar id turpis quis mattis. Sed eu suscipit velit, eget elementum dui.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar id turpis quis mattis. Sed eu suscipit velit, eget elementum dui.",
       status: "completed",
-      tech: ["react", "nginx", "nextjs", "framer motion"],
+      tech: ["react", "nginx", "nextjs"],
     },
     {
       id: "Project4",

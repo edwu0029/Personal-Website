@@ -6,7 +6,7 @@ const TechIcon = (props) => {
       lineHeight="short"
       px="2"
       py="1"
-      bg="gray.200"
+      bg="#0B1117"
       fontFamily="mono"
       borderRadius="lg"
     >
