@@ -1,6 +1,7 @@
-import { Container, Heading, Text } from "@chakra-ui/react";
+import { Container, Heading, Text, Image, Flex, Box } from "@chakra-ui/react";
 import * as Consts from "../constants.js";
 import SkillDisplay from "../components/SkillsDisplay.jsx";
+import { motion } from "framer-motion";
 
 const langauges = [
   { name: "C", src: "./src/assets/skill-icons/languages/c_logo.png" },
@@ -10,11 +11,6 @@ const langauges = [
   { name: "JavaScript", src: "./src/assets/skill-icons/languages/js_logo.png" },
   { name: "HTML", src: "./src/assets/skill-icons/languages/html_logo.png" },
   { name: "CSS", src: "./src/assets/skill-icons/languages/css_logo.png" },
-  {
-    name: "MongoDB",
-    src: "./src/assets/skill-icons/languages/mongodb_logo.png",
-  },
-  { name: "SQL", src: "./src/assets/skill-icons/languages/sql_logo.png" },
 ];
 
 const tech = [
@@ -24,6 +20,11 @@ const tech = [
   { name: "Tailwind", src: "./src/assets/skill-icons/tech/tailwind_logo.png" },
   { name: "Django", src: "./src/assets/skill-icons/tech/django_logo.svg" },
   { name: "Flask", src: "./src/assets/skill-icons/tech/flask_logo.svg" },
+  {
+    name: "MongoDB",
+    src: "./src/assets/skill-icons/tech/mongodb_logo.png",
+  },
+  { name: "SQL", src: "./src/assets/skill-icons/tech/sql_logo.png" },
 ];
 
 const tools = [
@@ -37,6 +38,14 @@ const tools = [
 ];
 
 const About = (props) => {
+  const variants = {
+    initial: {
+      scale: 1,
+      boxShadow: "0 0 15px #63B3ED",
+      transition: { duration: 0.7 },
+    },
+    hover: { boxShadow: "0 0 30px #ED8936", transition: { duration: 0.7 } },
+  };
   return (
     <Container
       as="section"
@@ -47,23 +56,57 @@ const About = (props) => {
       <Heading as="h2" size="4xl" mb="20px" sx={Consts.headingStyle}>
         About Me
       </Heading>
-      <Text sx={Consts.bodyTextStyle}>
-        Hello! My name is Edward Wu, a second year Computer Engineering student
-        at the University of Toronto, based in Toronto, ON.
-      </Text>
-      <Text sx={Consts.bodyTextStyle}>
-        Intersted in Full-Stack Development, Artifical Intelligence, and
-        Computer Architecture.
-      </Text>
-      <Heading as="h3" size="lg" mt="36px" mb="20px">
+      <Flex justifyContent="space-around" align="center" mt="40px">
+        <Image
+          as={motion.img}
+          variants={variants}
+          initial="initial"
+          whileHover="hover"
+          boxSize="300px"
+          borderRadius="full"
+          mr="36px"
+          src="./src/assets/photo.png"
+        />
+        <Box>
+          <Text sx={Consts.bodyTextStyle} mb="20px">
+            Hello! My name is{" "}
+            <Text as="b" color="blue.300">
+              Edward Wu
+            </Text>
+            , a second year Computer Engineering student at the University of
+            Toronto, based out of Toronto, ON. Whether it's tinkering with
+            circuits or coding prototype apps, I'm always passionately building
+            new things and learning along the way!
+          </Text>
+          <Text>
+            <Text as="b" fontSize="lg" color="blue.300" opacity="100%">
+              Interested In:{" "}
+            </Text>
+            <Text as="span" sx={Consts.bodyTextStyle}>
+              Full-Stack Development, Artifical Intelligence, Computer
+              Architecture, and System Software
+            </Text>
+          </Text>
+          <Text>
+            <Text as="b" fontSize="lg" color="orange.400" opacity="100%">
+              Hobbies:{" "}
+            </Text>
+            <Text as="span" sx={Consts.bodyTextStyle}>
+              Basketball, Gaming, Hiking, Coding
+            </Text>
+          </Text>
+        </Box>
+      </Flex>
+
+      <Heading as="h3" size="lg" mt="28px" mb="20px">
         Programming Languages
       </Heading>
       <SkillDisplay skills={langauges} />
-      <Heading as="h3" size="lg" mb="20px" mt="36px">
+      <Heading as="h3" size="lg" mt="28px" mb="20px">
         Tech & Frameworks
       </Heading>
       <SkillDisplay skills={tech} />
-      <Heading as="h3" size="lg" mb="20px" mt="36px">
+      <Heading as="h3" size="lg" mt="28px" mb="20px">
         Tools
       </Heading>
       <SkillDisplay skills={tools} />

@@ -24,15 +24,15 @@ const Education = (props) => {
         Bachelor of Applied Science &bull; Computer Engineering
         <ExternalLinkIcon mx="2px" mb="4px" />
       </Link>
-      <Text color="orange.400" fontSize="xl">
+      <Text sx={Consts.bodyTextStyle}>
         Sept 2022 - Apr 2026 (Expected)
-      </Text>
-      <Text mt="20px" sx={Consts.bodyTextStyle}>
+        <br />
+        <br />
         Computer Engineering is a program that combines electrical engineering
-        and computer science principles, offering a comprehensive curriculum in
-        hardware and software. To build a well-rounded skillset, I am pursuing a
-        minor in Artifical Intelligence and a certificate in Engineering
-        Business.
+        and programming principles, offering a comprehensive curriculum in
+        hardware and software. Additionally to build a well-rounded skillset, I
+        am pursuing a minor in Artifical Intelligence and a certificate in
+        Engineering Business.
       </Text>
       <Text mt="20px" sx={Consts.bodyTextStyle}>
         Activities and Extracurriculars:{" "}
