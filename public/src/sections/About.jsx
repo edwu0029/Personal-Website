@@ -53,7 +53,7 @@ const About = (props) => {
       mb="100px"
       maxW={{ base: "container.lg", "2xl": "container.xl" }}
     >
-      <Heading as="h2" size="4xl" mb="20px" sx={Consts.headingStyle}>
+      <Heading as="h2" size="3xl" mb="20px" sx={Consts.headingStyle}>
         About Me
       </Heading>
       <Flex justifyContent="space-around" align="center" mt="40px">
@@ -102,11 +102,11 @@ const About = (props) => {
         Programming Languages
       </Heading>
       <SkillDisplay skills={langauges} />
-      <Heading as="h3" size="lg" mt="28px" mb="20px">
+      <Heading as="h3" size="lg" mt="20px" mb="20px">
         Tech & Frameworks
       </Heading>
       <SkillDisplay skills={tech} />
-      <Heading as="h3" size="lg" mt="28px" mb="20px">
+      <Heading as="h3" size="lg" mt="20px" mb="20px">
         Tools
       </Heading>
       <SkillDisplay skills={tools} />

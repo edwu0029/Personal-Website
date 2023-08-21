@@ -10,7 +10,7 @@ const Education = (props) => {
       maxW={{ base: "container.lg", "2xl": "container.xl" }}
     >
       <Text sx={Consts.captionStyle}>ALWAYS LEARNING</Text>
-      <Heading as="h2" size="4xl" mb="20px" sx={Consts.headingStyle}>
+      <Heading as="h2" size="3xl" mb="20px" sx={Consts.headingStyle}>
         Education
       </Heading>
       <Heading as="h3" color="orange.400" size="xl" fontWeight="bold">
@@ -24,10 +24,10 @@ const Education = (props) => {
         Bachelor of Applied Science &bull; Computer Engineering
         <ExternalLinkIcon mx="2px" mb="4px" />
       </Link>
-      <Text sx={Consts.bodyTextStyle}>
+      <Text sx={Consts.bodyTextStyle} mb="20px">
         Sept 2022 - Apr 2026 (Expected)
-        <br />
-        <br />
+      </Text>
+      <Text sx={Consts.bodyTextStyle}>
         Computer Engineering is a program that combines electrical engineering
         and programming principles, offering a comprehensive curriculum in
         hardware and software. Additionally to build a well-rounded skillset, I
