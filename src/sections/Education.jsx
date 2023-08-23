@@ -10,32 +10,33 @@ const Education = (props) => {
       maxW={{ base: "container.lg", "2xl": "container.xl" }}
     >
       <Text sx={Consts.captionStyle}>ALWAYS LEARNING</Text>
-      <Heading as="h2" size="4xl" mb="20px" sx={Consts.headingStyle}>
+      <Heading as="h2" size="3xl" mb="20px" sx={Consts.headingStyle}>
         Education
       </Heading>
-      <Heading as="h3" color="orange.400" size="xl" fontWeight="bold">
+      <Heading as="h3" color="orange.400" size="lg" fontWeight="bold">
         Unviersity of Toronto
       </Heading>
       <Link
         color="orange.400"
         fontSize="xl"
         href="https://discover.engineering.utoronto.ca/programs/engineering-programs/electrical-computer-engineering/"
+        isExternal
       >
-        Bachelor of Applied Science, Computer Engineering
+        Bachelor of Applied Science &bull; Computer Engineering
         <ExternalLinkIcon mx="2px" mb="4px" />
       </Link>
-      <Text color="orange.400" fontSize="xl">
+      <Text sx={Consts.bodyTextStyle} mb="20px">
         Sept 2022 - Apr 2026 (Expected)
       </Text>
-      <Text mt="20px" sx={Consts.bodyTextStyle}>
+      <Text sx={Consts.bodyTextStyle}>
         Computer Engineering is a program that combines electrical engineering
-        and computer science principles, offering a comprehensive curriculum in
-        hardware and software. To build a well-rounded skillset, I am pursuing a
-        minor in Artifical Intelligence and a certificate in Engineering
-        Business.
+        and programming principles, offering a comprehensive curriculum in
+        hardware and software. Additionally to build a well-rounded skillset, I
+        am pursuing a minor in Artifical Intelligence and a certificate in
+        Engineering Business.
       </Text>
       <Text mt="20px" sx={Consts.bodyTextStyle}>
-        Activities:{" "}
+        Activities and Extracurriculars:{" "}
         <Link color="yellow.200" href="https://spark.skule.ca/" isExternal>
           SPARK Design Club
           <ExternalLinkIcon mx="2px" mb="4px" />

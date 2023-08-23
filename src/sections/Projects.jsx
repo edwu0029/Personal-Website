@@ -11,7 +11,7 @@ const Projects = (props) => {
       maxW={{ base: "container.lg", "2xl": "container.xl" }}
     >
       <Text sx={Consts.captionStyle}>IMPACTFUL, INNOVATIVE, CREATIVE</Text>
-      <Heading as="h2" size="4xl" mb="20px" sx={Consts.headingStyle}>
+      <Heading as="h2" size="3xl" mb="20px" sx={Consts.headingStyle}>
         Projects
       </Heading>
       <Text mb="32px" sx={Consts.bodyTextStyle}>

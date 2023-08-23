@@ -25,10 +25,18 @@ const ProjectCard = (props) => {
     intial: {
       y: 0,
       rotateY: 0,
-      transition: { duration: 0.2 },
+      transition: { duration: 0.3 },
     },
-    hover: { y: "-1rem", transition: { duration: 0.2 } },
-    flip: { rotateY: -180, transition: { duration: 0.2 } },
+    hover: {
+      y: "-1rem",
+      transition: {
+        duration: 0.2,
+        type: "spring",
+        stiffness: 400,
+        damping: 15,
+      },
+    },
+    flip: { rotateY: -180, transition: { duration: 0.3 } },
   };
   const viewMoreClickHandler = (e) => {
     setIsFront((prev) => !prev);
@@ -40,7 +48,7 @@ const ProjectCard = (props) => {
       animate={isFront ? "intial" : "flip"}
       variants={variants}
       maxW={{ base: "300px", "2xl": "sm" }}
-      bg="whiteAlpha.200"
+      bg=""
       whileHover="hover"
       boxShadow="0 0 20px black"
     >
