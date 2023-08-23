@@ -13,13 +13,14 @@ const Education = (props) => {
       <Heading as="h2" size="3xl" mb="20px" sx={Consts.headingStyle}>
         Education
       </Heading>
-      <Heading as="h3" color="orange.400" size="xl" fontWeight="bold">
+      <Heading as="h3" color="orange.400" size="lg" fontWeight="bold">
         Unviersity of Toronto
       </Heading>
       <Link
         color="orange.400"
         fontSize="xl"
         href="https://discover.engineering.utoronto.ca/programs/engineering-programs/electrical-computer-engineering/"
+        isExternal
       >
         Bachelor of Applied Science &bull; Computer Engineering
         <ExternalLinkIcon mx="2px" mb="4px" />

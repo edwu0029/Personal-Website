@@ -48,7 +48,7 @@ const ProjectCard = (props) => {
       animate={isFront ? "intial" : "flip"}
       variants={variants}
       maxW={{ base: "300px", "2xl": "sm" }}
-      bg="whiteAlpha.200"
+      bg=""
       whileHover="hover"
       boxShadow="0 0 20px black"
     >

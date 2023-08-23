@@ -23,7 +23,7 @@ const SkillIcon = (props) => {
       initial={false}
       variants={variants}
       whileHover="hover"
-      bg="whiteAlpha.200"
+      bg="whiteAlpha.300"
       borderRadius="xl"
       p="8px"
       gap="0"

@@ -3,12 +3,16 @@ import Education from "./sections/Education";
 import { Box } from "@chakra-ui/react";
 import About from "./sections/About";
 import Home from "./sections/Home";
+import NavBar from "./components/NavBar";
 function App() {
   const s = {
     backgroundColor: "#0B1117",
   };
   return (
     <Box style={s}>
+      <Box>
+        <NavBar />
+      </Box>
       <Home />
       <About />
       <Education />
