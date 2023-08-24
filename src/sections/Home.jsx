@@ -10,14 +10,17 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaFilePdf } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { motion } from "framer-motion";
 const Home = (props) => {
   return (
     <Container
-      as="section"
-      px="20px"
-      pt="20vh"
+      as={motion.section}
+      p="20px"
       maxW={{ base: "container.lg", "2xl": "container.xl" }}
+      px="20px"
+      pt="30vh"
       h="100vh"
+      maxH="container.2xl"
     >
       <Flex>
         <Box mr="20px">

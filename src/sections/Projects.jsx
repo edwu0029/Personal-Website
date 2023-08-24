@@ -1,13 +1,13 @@
 import { Container, Heading, Text } from "@chakra-ui/react";
 import ProjectDisplay from "../components/ProjectDisplay";
 import * as Consts from "../constants.js";
+import { motion } from "framer-motion";
 
 const Projects = (props) => {
   return (
     <Container
-      as="section"
+      as={motion.section}
       p="20px"
-      mb="100px"
       maxW={{ base: "container.lg", "2xl": "container.xl" }}
     >
       <Text sx={Consts.captionStyle}>IMPACTFUL, INNOVATIVE, CREATIVE</Text>
@@ -21,7 +21,7 @@ const Projects = (props) => {
         utilizes different problem-solving techniques and technologies to tackle
         unique challenges.
       </Text>
-      <ProjectDisplay></ProjectDisplay>
+      <ProjectDisplay />
     </Container>
   );
 };

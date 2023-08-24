@@ -48,10 +48,10 @@ const About = (props) => {
   };
   return (
     <Container
-      as="section"
+      as={motion.section}
       p="20px"
-      mb="100px"
       maxW={{ base: "container.lg", "2xl": "container.xl" }}
+      mb="100px"
     >
       <Heading as="h2" size="3xl" mb="20px" sx={Consts.headingStyle}>
         About Me
