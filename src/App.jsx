@@ -10,9 +10,7 @@ function App() {
   };
   return (
     <Box style={s}>
-      <Box>
-        <NavBar />
-      </Box>
+      <NavBar />
       <Home />
       <About />
       <Education />

@@ -11,7 +11,19 @@ import { FaGithub } from "react-icons/fa";
 import { FaFilePdf } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { motion } from "framer-motion";
+import { fadeIn } from "../utils/animations";
 const Home = (props) => {
+  const lineAnimate = {
+    initial: {
+      x: "-200%",
+      opacity: "0%",
+    },
+    show: {
+      x: 0,
+      opacity: "100%",
+      transition: { duration: 2, ease: "easeInOut" },
+    },
+  };
   return (
     <Container
       as={motion.section}
@@ -21,17 +33,26 @@ const Home = (props) => {
       pt="30vh"
       h="100vh"
       maxH="container.2xl"
+      id="home"
     >
       <Flex>
         <Box mr="20px">
           <Box
-            as="div"
+            as={motion.div}
+            variants={lineAnimate}
+            initial="initial"
+            animate="show"
             w="15px"
             h="275px"
             bg="linear-gradient(180deg, #4299E1 0%, #0B1117 110%)"
           />
         </Box>
-        <Box>
+        <Box
+          as={motion.div}
+          variants={fadeIn("down")}
+          initial="initial"
+          animate="show"
+        >
           <Text fontSize="3xl" letterSpacing="wide">
             Hi there! I'm
           </Text>

@@ -2,6 +2,7 @@ import { Container, Heading, Text, Image, Flex, Box } from "@chakra-ui/react";
 import * as Consts from "../constants.js";
 import SkillDisplay from "../components/SkillsDisplay.jsx";
 import { motion } from "framer-motion";
+import { fadeIn } from "../utils/animations.js";
 
 const langauges = [
   { name: "C", src: "./src/assets/skill-icons/languages/c_logo.png" },
@@ -50,13 +51,34 @@ const About = (props) => {
     <Container
       as={motion.section}
       p="20px"
+      pt="60px"
       maxW={{ base: "container.lg", "2xl": "container.xl" }}
       mb="100px"
+      id="about"
     >
-      <Heading as="h2" size="3xl" mb="20px" sx={Consts.headingStyle}>
+      <Heading
+        as={motion.h2}
+        variants={fadeIn("down")}
+        initial="initial"
+        whileInView="show"
+        viewport={{ once: true }}
+        size="3xl"
+        mb="20px"
+        sx={Consts.headingStyle}
+      >
         About Me
       </Heading>
-      <Flex justifyContent="space-around" align="center" mt="40px">
+      <Flex
+        as={motion.div}
+        variants={fadeIn("up")}
+        initial="initial"
+        whileInView="show"
+        viewport={{ once: true }}
+        justifyContent="space-around"
+        align="center"
+        mt="40px"
+        mb="60px"
+      >
         <Image
           as={motion.img}
           variants={variants}
@@ -97,7 +119,6 @@ const About = (props) => {
           </Text>
         </Box>
       </Flex>
-
       <Heading as="h3" size="lg" mt="28px" mb="20px">
         Programming Languages
       </Heading>

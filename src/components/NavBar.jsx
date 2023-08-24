@@ -1,4 +1,5 @@
 import { Box, Flex, Link, HStack } from "@chakra-ui/react";
+import { useRef } from "react";
 
 const NavBar = () => {
   return (
@@ -13,7 +14,12 @@ const NavBar = () => {
       px={{ base: "50px", xl: "100px", "2xl": "200px" }}
       py="12px"
     >
-      <Link fontSize="2xl" fontWeight="bold" _hover={{ opacity: "100%" }}>
+      <Link
+        fontSize="2xl"
+        fontWeight="bold"
+        _hover={{ opacity: "100%" }}
+        href="/#home"
+      >
         Edward Wu.
       </Link>
       <HStack gap={10}>
@@ -21,7 +27,8 @@ const NavBar = () => {
           fontSize="xl"
           opacity="85%"
           fontWeight="500"
-          _hover={{ opacity: "100%", color: "blue.400" }}
+          _hover={{ opacity: "100%" }}
+          href="/#about"
         >
           About
         </Link>
@@ -30,6 +37,7 @@ const NavBar = () => {
           opacity="85%"
           fontWeight="500"
           _hover={{ opacity: "100%" }}
+          href="/#education"
         >
           Education
         </Link>
@@ -38,6 +46,7 @@ const NavBar = () => {
           opacity="85%"
           fontWeight="500"
           _hover={{ opacity: "100%" }}
+          href="/#projects"
         >
           Projects
         </Link>

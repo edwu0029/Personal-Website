@@ -4,11 +4,14 @@ import { motion } from "framer-motion";
 const SkillIcon = (props) => {
   const variants = {
     initial: {
+      x: "-100%",
       y: 0,
       opacity: "0%",
     },
     show: {
+      x: 0,
       opacity: "100%",
+      transition: { duration: 0.2, delay: 0.3 * props.idx, ease: "easeOut" },
     },
     hover: {
       y: "-0.3rem",
@@ -24,6 +27,9 @@ const SkillIcon = (props) => {
     <VStack
       as={motion.div}
       variants={variants}
+      initial="initial"
+      whileInView="show"
+      viewport={{ once: true }}
       whileHover="hover"
       bg="whiteAlpha.300"
       borderRadius="xl"
