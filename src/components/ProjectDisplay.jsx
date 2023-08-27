@@ -50,7 +50,11 @@ const ProjectDisplay = (props) => {
     },
   ];
   return (
-    <Flex gap="10" wrap="wrap">
+    <Flex
+      gap={{ base: "5", md: "7", "2xl": "10" }}
+      wrap="wrap"
+      justifyContent={{ base: "center", lg: "left" }}
+    >
       {projects.map((p) => {
         return (
           <ProjectCard

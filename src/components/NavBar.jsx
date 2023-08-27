@@ -1,65 +1,141 @@
-import { Box, Flex, Link, HStack } from "@chakra-ui/react";
-import { useRef } from "react";
+import { useState } from "react";
+import {
+  Box,
+  Flex,
+  Link,
+  HStack,
+  IconButton,
+  VStack,
+  Divider,
+} from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 const NavBar = () => {
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  const handleHamburgerClick = () => {
+    setHamburgerOpen((prev) => !prev);
+  };
   return (
-    <Flex
+    <Box
       zIndex="docked"
       as="nav"
       position="fixed"
       w="100vw"
-      flex="row"
-      bg="#0B1117"
-      justify="space-between"
-      px={{ base: "50px", xl: "100px", "2xl": "200px" }}
-      py="12px"
+      bg="rgba(11, 17, 23, 0.87)"
     >
-      <Link
-        fontSize="2xl"
-        fontWeight="bold"
-        _hover={{ opacity: "100%" }}
-        href="/#home"
+      <Flex
+        flex="row"
+        justify="space-between"
+        align="center"
+        px={{ base: "20px", md: "50px", xl: "70px", "2xl": "200px" }}
       >
-        Edward Wu.
-      </Link>
-      <HStack gap={10}>
         <Link
-          fontSize="xl"
-          opacity="85%"
-          fontWeight="500"
-          _hover={{ opacity: "100%" }}
-          href="/#about"
+          fontSize={{ base: "lg", md: "2xl" }}
+          fontWeight="bold"
+          href="/#home"
+          py="16px"
         >
-          About
+          edwardwu.
         </Link>
-        <Link
-          fontSize="xl"
-          opacity="85%"
-          fontWeight="500"
-          _hover={{ opacity: "100%" }}
-          href="/#education"
+        {/* For Desktop */}
+        <HStack
+          as="div"
+          display={{ base: "none", sm: "flex" }}
+          gap={{ base: 4, md: 10 }}
         >
-          Education
-        </Link>
-        <Link
-          fontSize="xl"
-          opacity="85%"
-          fontWeight="500"
-          _hover={{ opacity: "100%" }}
-          href="/#projects"
-        >
-          Projects
-        </Link>
-        <Link
-          fontSize="xl"
-          opacity="85%"
-          fontWeight="500"
-          _hover={{ opacity: "100%" }}
-        >
-          Contact
-        </Link>
-      </HStack>
-    </Flex>
+          <Link
+            fontSize={{ base: "lg", md: "xl" }}
+            opacity="85%"
+            fontWeight="500"
+            _hover={{ opacity: "100%" }}
+            href="/#about"
+          >
+            About
+          </Link>
+          <Link
+            fontSize={{ base: "lg", md: "xl" }}
+            opacity="85%"
+            fontWeight="500"
+            _hover={{ opacity: "100%" }}
+            href="/#education"
+          >
+            Education
+          </Link>
+          <Link
+            fontSize={{ base: "lg", md: "xl" }}
+            opacity="85%"
+            fontWeight="500"
+            _hover={{ opacity: "100%" }}
+            href="/#projects"
+          >
+            Projects
+          </Link>
+          <Link
+            fontSize={{ base: "lg", md: "xl" }}
+            opacity="85%"
+            fontWeight="500"
+            _hover={{ opacity: "100%" }}
+            href="#contact"
+          >
+            Contact
+          </Link>
+        </HStack>
+        {/* For Mobile */}
+        <Box display={{ base: "block", sm: "none" }}>
+          <IconButton
+            icon={<HamburgerIcon boxSize="25px" />}
+            onClick={handleHamburgerClick}
+          />
+        </Box>
+      </Flex>
+      {hamburgerOpen ? (
+        <VStack centerContent py="20px">
+          <Link
+            fontSize={{ base: "lg", md: "xl" }}
+            opacity="85%"
+            fontWeight="500"
+            _hover={{ opacity: "100%" }}
+            onClick={handleHamburgerClick}
+            href="/#about"
+          >
+            About
+          </Link>
+          <Link
+            fontSize={{ base: "lg", md: "xl" }}
+            opacity="85%"
+            fontWeight="500"
+            _hover={{ opacity: "100%" }}
+            onClick={handleHamburgerClick}
+            href="/#education"
+          >
+            Education
+          </Link>
+          <Link
+            fontSize={{ base: "lg", md: "xl" }}
+            opacity="85%"
+            fontWeight="500"
+            _hover={{ opacity: "100%" }}
+            onClick={handleHamburgerClick}
+            href="/#projects"
+          >
+            Projects
+          </Link>
+          <Link
+            fontSize={{ base: "lg", md: "xl" }}
+            opacity="85%"
+            fontWeight="500"
+            _hover={{ opacity: "100%" }}
+            onClick={handleHamburgerClick}
+            href="#contact"
+          >
+            Contact
+          </Link>
+          <Divider />
+        </VStack>
+      ) : (
+        ""
+      )}
+    </Box>
   );
 };
 export default NavBar;

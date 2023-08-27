@@ -5,11 +5,11 @@ import {
   Flex,
   IconButton,
   Box,
+  Link,
 } from "@chakra-ui/react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { FaFilePdf } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { EmailIcon, AttachmentIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/animations";
 const Home = (props) => {
@@ -28,7 +28,13 @@ const Home = (props) => {
     <Container
       as={motion.section}
       p="20px"
-      maxW={{ base: "container.lg", "2xl": "container.xl" }}
+      maxW={{
+        base: "100%",
+        md: "container.sm",
+        lg: "container.md",
+        xl: "container.lg",
+        "2xl": "container.xl",
+      }}
       px="20px"
       pt="30vh"
       h="100vh"
@@ -43,7 +49,7 @@ const Home = (props) => {
             initial="initial"
             animate="show"
             w="15px"
-            h="275px"
+            h="100%"
             bg="linear-gradient(180deg, #4299E1 0%, #0B1117 110%)"
           />
         </Box>
@@ -56,7 +62,11 @@ const Home = (props) => {
           <Text fontSize="3xl" letterSpacing="wide">
             Hi there! I'm
           </Text>
-          <Heading as="h1" fontSize="96px" lineHeight="shorter">
+          <Heading
+            as="h1"
+            fontSize={{ base: "72px", md: "96px" }}
+            lineHeight="shorter"
+          >
             <Text as="span" color="blue.400">
               Edward
             </Text>{" "}
@@ -66,26 +76,38 @@ const Home = (props) => {
             Software Engineer
           </Text>
           <Flex mt="12px" gap="3">
-            <IconButton
-              borderRadius="full"
-              bg="whiteAlpha.300"
-              icon={<FaLinkedinIn size="20" />}
-            />
-            <IconButton
-              borderRadius="full"
-              bg="whiteAlpha.300"
-              icon={<FaGithub size="20" />}
-            />
-            <IconButton
-              borderRadius="full"
-              bg="whiteAlpha.300"
-              icon={<MdEmail size="20" />}
-            />
-            <IconButton
-              borderRadius="full"
-              bg="whiteAlpha.300"
-              icon={<FaFilePdf size="20" />}
-            />
+            <Link href="https://www.linkedin.com/in/edwu0029/" isExternal>
+              <IconButton
+                as="div"
+                borderRadius="full"
+                bg="whiteAlpha.300"
+                icon={<FaLinkedinIn size="20" />}
+              />
+            </Link>
+            <Link href="https://github.com/edwu0029" isExternal>
+              <IconButton
+                as="div"
+                borderRadius="full"
+                bg="whiteAlpha.300"
+                icon={<FaGithub size="20" />}
+              />
+            </Link>
+            <Link href="mailto:edwardwu0029@gmail.com" isExternal>
+              <IconButton
+                as="div"
+                borderRadius="full"
+                bg="whiteAlpha.300"
+                icon={<EmailIcon size="20" />}
+              />
+            </Link>
+            <Link href="https://www.google.ca" isExternal>
+              <IconButton
+                as="div"
+                borderRadius="full"
+                bg="whiteAlpha.300"
+                icon={<AttachmentIcon size="20" />}
+              />
+            </Link>
           </Flex>
         </Box>
       </Flex>

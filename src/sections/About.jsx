@@ -51,8 +51,14 @@ const About = (props) => {
     <Container
       as={motion.section}
       p="20px"
-      pt="60px"
-      maxW={{ base: "container.lg", "2xl": "container.xl" }}
+      pt="80px"
+      maxW={{
+        base: "100%",
+        md: "container.sm",
+        lg: "container.md",
+        xl: "container.lg",
+        "2xl": "container.xl",
+      }}
       mb="100px"
       id="about"
     >
@@ -65,6 +71,7 @@ const About = (props) => {
         size="3xl"
         mb="20px"
         sx={Consts.headingStyle}
+        textAlign={{ base: "center", sm: "left" }}
       >
         About Me
       </Heading>
@@ -74,8 +81,9 @@ const About = (props) => {
         initial="initial"
         whileInView="show"
         viewport={{ once: true }}
+        flexDirection={{ base: "column", md: "row" }}
         justifyContent="space-around"
-        align="center"
+        alignItems="center"
         mt="40px"
         mb="60px"
       >
@@ -84,9 +92,9 @@ const About = (props) => {
           variants={variants}
           initial="initial"
           whileHover="hover"
-          boxSize="300px"
+          boxSize={{ base: "250px", md: "250px", lg: "300px" }}
           borderRadius="full"
-          mr="36px"
+          m={{ base: "0 0 30px 0", md: "0 36px 0 0 " }}
           src="./src/assets/photo.png"
         />
         <Box>

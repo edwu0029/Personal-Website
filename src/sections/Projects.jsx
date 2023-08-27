@@ -9,8 +9,14 @@ const Projects = (props) => {
     <Container
       as={motion.section}
       p="20px"
-      pt="60px"
-      maxW={{ base: "container.lg", "2xl": "container.xl" }}
+      pt="80px"
+      maxW={{
+        base: "100%",
+        md: "container.sm",
+        lg: "container.md",
+        xl: "container.lg",
+        "2xl": "container.xl",
+      }}
       id="projects"
     >
       <Box
@@ -19,6 +25,7 @@ const Projects = (props) => {
         initial="initial"
         whileInView="show"
         viewport={{ once: true }}
+        textAlign={{ base: "center", sm: "left" }}
       >
         <Text sx={Consts.captionStyle}>IMPACTFUL, INNOVATIVE, CREATIVE</Text>
         <Heading as="h2" size="3xl" mb="20px" sx={Consts.headingStyle}>

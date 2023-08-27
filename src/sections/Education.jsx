@@ -9,7 +9,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import * as Consts from "../constants.js";
-import { FiExternalLink } from "react-icons/fi";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/animations.js";
 const Education = (props) => {
@@ -17,8 +17,14 @@ const Education = (props) => {
     <Container
       as={motion.section}
       p="20px"
-      pt="60px"
-      maxW={{ base: "container.lg", "2xl": "container.xl" }}
+      pt="80px"
+      maxW={{
+        base: "100%",
+        md: "container.sm",
+        lg: "container.md",
+        xl: "container.lg",
+        "2xl": "container.xl",
+      }}
       mb="100px"
       id="education"
     >
@@ -28,6 +34,7 @@ const Education = (props) => {
         initial="initial"
         whileInView="show"
         viewport={{ once: true }}
+        textAlign={{ base: "center", sm: "left" }}
         mb="20px"
       >
         <Text sx={Consts.captionStyle}>ALWAYS LEARNING</Text>
@@ -51,10 +58,8 @@ const Education = (props) => {
           href="https://discover.engineering.utoronto.ca/programs/engineering-programs/electrical-computer-engineering/"
           isExternal
         >
-          <Flex alignItems="center" gap="4px">
-            Bachelor of Applied Science &bull; Computer Engineering
-            <FiExternalLink />
-          </Flex>
+          Bachelor of Applied Science &bull; Computer Engineering
+          <ExternalLinkIcon ml="4px" />
         </Link>
         <Text sx={Consts.bodyTextStyle} mb="20px">
           Sept 2022 - Apr 2026 (Expected)
@@ -66,28 +71,30 @@ const Education = (props) => {
           I am pursuing a minor in Artifical Intelligence and a certificate in
           Engineering Business.
         </Text>
-        <HStack mt="20px" sx={Consts.bodyTextStyle}>
-          <Text>Activities and Extracurriculars: </Text>
+        <Text mt="20px" sx={Consts.bodyTextStyle}>
+          Activities and Extracurriculars:{" "}
           <Link color="yellow.200" href="https://spark.skule.ca/" isExternal>
-            <Flex as="span" alignItems="center" gap="4px">
-              SPARK Design Club
-              <FiExternalLink />
-            </Flex>
+            SPARK Design Club
+            <ExternalLinkIcon ml="4px" />
           </Link>
-          <Text>,</Text>
+          ,{" "}
           <Link color="blue.200" href="https://utmist.gitlab.io/" isExternal>
-            <Flex as="span" alignItems="center" gap="4px">
-              UTMIST
-              <FiExternalLink />
-            </Flex>
+            UTMIST
+            <ExternalLinkIcon ml="4px" />
           </Link>
-        </HStack>
+        </Text>
       </Box>
-      <Flex mt="40px" mx="60px" justifyContent="space-around">
-        <Image h="100px" src="./src/assets/uoft_logo.png" />
-        <Image h="100px" borderRadius="xl" src="./src/assets/uoft_ece.jpg" />
-        <Image h="100px" src="./src/assets/skule.png" />
-        <Image h="100px" src="./src/assets/spark_design_club.png" />
+      <Flex
+        mt="40px"
+        mx="60px"
+        gap="4"
+        justifyContent="space-around"
+        wrap="wrap"
+      >
+        <Image h="6rem" src="./src/assets/uoft_logo.png" />
+        <Image h="6rem" borderRadius="xl" src="./src/assets/uoft_ece.jpg" />
+        <Image h="6rem" src="./src/assets/skule.png" />
+        <Image h="6rem" src="./src/assets/spark_design_club.png" />
         <Image
           h="100px"
           bg="white"
