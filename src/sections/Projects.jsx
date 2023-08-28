@@ -1,10 +1,11 @@
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
 import ProjectDisplay from "../components/ProjectDisplay";
-import * as Consts from "../constants.js";
+import * as Consts from "../data/constants.js";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/animations";
 
 const Projects = (props) => {
+  const projectsData = props.data.projects.projects_data;
   return (
     <Container
       as={motion.section}
@@ -17,6 +18,7 @@ const Projects = (props) => {
         xl: "container.lg",
         "2xl": "container.xl",
       }}
+      mb="10vh"
       id="projects"
     >
       <Box
@@ -46,7 +48,7 @@ const Projects = (props) => {
           project utilizes different problem-solving techniques and technologies
           to tackle unique challenges.
         </Text>
-        <ProjectDisplay />
+        <ProjectDisplay projects={projectsData} />
       </Box>
     </Container>
   );

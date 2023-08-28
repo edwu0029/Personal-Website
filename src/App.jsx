@@ -6,18 +6,17 @@ import Home from "./sections/Home";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Contact from "./sections/Contact";
+import data from "./data/data.json";
+
 function App() {
-  const s = {
-    backgroundColor: "#0B1117",
-  };
   return (
-    <Box style={s}>
+    <Box backgroundColor="#0B1117">
       <NavBar />
-      <Home />
-      <About />
-      <Education />
-      <Projects />
-      <Contact />
+      <Home data={data} />
+      <About data={data} />
+      <Education data={data} />
+      <Projects data={data} />
+      <Contact data={data} />
       <Footer />
     </Box>
   );

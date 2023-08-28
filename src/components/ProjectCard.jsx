@@ -17,7 +17,7 @@ import { LuRocket } from "react-icons/lu";
 import { HiSwitchHorizontal } from "react-icons/hi";
 import TechIcon from "./TechIcon";
 import { useState } from "react";
-import * as Consts from "../constants.js";
+import * as Consts from "../data/constants.js";
 
 const ProjectCard = (props) => {
   const [isFront, setIsFront] = useState(true);
@@ -47,7 +47,8 @@ const ProjectCard = (props) => {
       intial={false}
       animate={isFront ? "intial" : "flip"}
       variants={variants}
-      maxW={{ base: "100%", md: "300px", "2xl": "sm" }}
+      maxW={{ base: "100%", sm: "280px", "2xl": "sm" }}
+      h="500px"
       whileHover="hover"
       boxShadow="0 0 20px black"
     >
@@ -103,7 +104,7 @@ const ProjectCard = (props) => {
               />
             </HStack>
             <Text mt="2" sx={Consts.bodyTextStyle}>
-              {props.description}
+              {props.backDescription}
             </Text>
             <HStack mt="2" justifyContent="Left" wrap="wrap" gap="1.5">
               {props.tech.map((t) => {

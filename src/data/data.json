@@ -1,0 +1,73 @@
+{
+  "urls": {
+    "github": "https://github.com/edwu0029",
+    "linkedin": "https://www.linkedin.com/in/edwu0029/",
+    "email": "edwardwu0029@gmail.com",
+    "resume": "/data/resume.pdf",
+    "instagram": "https://www.instagram.com/edwardwu.29/"
+  },
+  "education": {
+    "clubs": [
+      { "name": "uoft", "file": "/assets/clubs/uoft.png" },
+      { "name": "ece", "file": "/assets/clubs/ece.png" },
+      { "name": "skule", "file": "/assets/clubs/skule.png" },
+      { "name": "spark", "file": "/assets/clubs/spark.png" },
+      { "name": "utmist", "file": "/assets/clubs/utmist.png" }
+    ],
+    "urls": {
+      "ece": "https://discover.engineering.utoronto.ca/programs/engineering-programs/electrical-computer-engineering/",
+      "spark": "https://spark.skule.ca/",
+      "utmist": "https://utmist.gitlab.io/"
+    }
+  },
+  "about": {
+    "about_photo": {
+      "file": "/assets/photo.png"
+    },
+    "skills": {
+      "languages": [
+        { "name": "C", "file": "/assets/skills-icons/c_logo.png" },
+        { "name": "C++", "file": "/assets/skills-icons/cpp_logo.png" },
+        { "name": "Java", "file": "/assets/skills-icons/java_logo.png" },
+        { "name": "Python", "file": "/assets/skills-icons/python_logo.png" },
+        { "name": "JavaScript", "file": "/assets/skills-icons/js_logo.png" },
+        { "name": "HTML", "file": "/assets/skills-icons/html_logo.png" },
+        { "name": "CSS", "file": "/assets/skills-icons/css_logo.png" }
+      ],
+      "tech": [
+        { "name": "React", "file": "/assets/skills-icons/react_logo.png" },
+        { "name": "NodeJS", "file": "/assets/skills-icons/nodejs_logo.png" },
+        { "name": "NextJS", "file": "/assets/skills-icons/nextjs_logo.svg" },
+        {
+          "name": "Tailwind",
+          "file": "/assets/skills-icons/tailwind_logo.png"
+        },
+        { "name": "Django", "file": "/assets/skills-icons/django_logo.svg" },
+        { "name": "Flask", "file": "/assets/skills-icons/flask_logo.svg" },
+        { "name": "MongoDB", "file": "/assets/skills-icons/mongodb_logo.png" },
+        { "name": "SQL", "file": "/assets/skills-icons/sql_logo.png" }
+      ],
+      "tools": [
+        { "name": "Linux", "file": "/assets/skills-icons/linux_logo.png" },
+        { "name": "Git", "file": "/assets/skills-icons/git_logo.png" },
+        { "name": "Docker", "file": "/assets/skills-icons/docker_logo.png" },
+        {
+          "name": "Fusion360",
+          "file": "/assets/skills-icons/fusion360_logo.png"
+        }
+      ]
+    }
+  },
+  "projects": {
+    "projects_data": [
+      {
+        "title": "PaintBoard",
+        "img": "/assets/projects/projectDisplayTMP.jpg",
+        "description": "An education application that provides a collaborative environment to draw and write on a single canvas.",
+        "backDescription": " education application that provides a collaborative environment to draw and write on a single canvas.",
+        "status": "completed",
+        "tech": ["java", "GUI"]
+      }
+    ]
+  }
+}

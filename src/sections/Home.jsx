@@ -13,6 +13,7 @@ import { EmailIcon, AttachmentIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/animations";
 const Home = (props) => {
+  const data = props.data;
   const lineAnimate = {
     initial: {
       x: "-200%",
@@ -72,11 +73,17 @@ const Home = (props) => {
             </Text>{" "}
             Wu
           </Heading>
-          <Text as="span" fontSize="3xl" mt="40px" letterSpacing="wide">
+          <Text
+            as="span"
+            fontSize="3xl"
+            mt="40px"
+            h="40px"
+            letterSpacing="wide"
+          >
             Software Engineer
           </Text>
           <Flex mt="12px" gap="3">
-            <Link href="https://www.linkedin.com/in/edwu0029/" isExternal>
+            <Link href={data.urls.linkedin} isExternal>
               <IconButton
                 as="div"
                 borderRadius="full"
@@ -84,7 +91,7 @@ const Home = (props) => {
                 icon={<FaLinkedinIn size="20" />}
               />
             </Link>
-            <Link href="https://github.com/edwu0029" isExternal>
+            <Link href={data.urls.github} isExternal>
               <IconButton
                 as="div"
                 borderRadius="full"
@@ -92,7 +99,7 @@ const Home = (props) => {
                 icon={<FaGithub size="20" />}
               />
             </Link>
-            <Link href="mailto:edwardwu0029@gmail.com" isExternal>
+            <Link href={`mailto:${data.urls.email}`} isExternal>
               <IconButton
                 as="div"
                 borderRadius="full"
@@ -100,7 +107,7 @@ const Home = (props) => {
                 icon={<EmailIcon size="20" />}
               />
             </Link>
-            <Link href="https://www.google.ca" isExternal>
+            <Link href={data.urls.resume} isExternal>
               <IconButton
                 as="div"
                 borderRadius="full"

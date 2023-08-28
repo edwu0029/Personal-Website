@@ -6,13 +6,13 @@ import {
   Link,
   Flex,
   Image,
-  HStack,
 } from "@chakra-ui/react";
-import * as Consts from "../constants.js";
+import * as Consts from "../data/constants.js";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/animations.js";
 const Education = (props) => {
+  const educationData = props.data.education;
   return (
     <Container
       as={motion.section}
@@ -25,7 +25,7 @@ const Education = (props) => {
         xl: "container.lg",
         "2xl": "container.xl",
       }}
-      mb="100px"
+      mb="10vh"
       id="education"
     >
       <Box
@@ -55,7 +55,7 @@ const Education = (props) => {
         <Link
           color="orange.400"
           fontSize="xl"
-          href="https://discover.engineering.utoronto.ca/programs/engineering-programs/electrical-computer-engineering/"
+          href={educationData.urls.ece}
           isExternal
         >
           Bachelor of Applied Science &bull; Computer Engineering
@@ -67,18 +67,18 @@ const Education = (props) => {
         <Text sx={Consts.bodyTextStyle}>
           Computer Engineering is a program that combines electrical engineering
           and programming principles, offering a comprehensive curriculum in
-          hardware and software. Additionally to build a well-rounded skillset,
-          I am pursuing a minor in Artifical Intelligence and a certificate in
-          Engineering Business.
+          hardware and software. Additionally, I am pursuing a minor in
+          Artificial Intelligence and a certificate in Engineering Business to
+          build a well-rounded skillset.
         </Text>
         <Text mt="20px" sx={Consts.bodyTextStyle}>
           Activities and Extracurriculars:{" "}
-          <Link color="yellow.200" href="https://spark.skule.ca/" isExternal>
+          <Link color="yellow.200" href={educationData.urls.spark} isExternal>
             SPARK Design Club
             <ExternalLinkIcon ml="4px" />
           </Link>
           ,{" "}
-          <Link color="blue.200" href="https://utmist.gitlab.io/" isExternal>
+          <Link color="blue.200" href={educationData.urls.utmist} isExternal>
             UTMIST
             <ExternalLinkIcon ml="4px" />
           </Link>
@@ -91,17 +91,11 @@ const Education = (props) => {
         justifyContent="space-around"
         wrap="wrap"
       >
-        <Image h="6rem" src="./src/assets/uoft_logo.png" />
-        <Image h="6rem" borderRadius="xl" src="./src/assets/uoft_ece.jpg" />
-        <Image h="6rem" src="./src/assets/skule.png" />
-        <Image h="6rem" src="./src/assets/spark_design_club.png" />
-        <Image
-          h="100px"
-          bg="white"
-          p="8px"
-          borderRadius="xl"
-          src="./src/assets/utmist.svg"
-        />
+        <Image h="6rem" borderRadius="xl" src="/assets/clubs/uoft.png" />
+        <Image h="6rem" borderRadius="xl" src="/assets/clubs/ece.jpg" />
+        <Image h="6rem" borderRadius="xl" src="/assets/clubs/skule.png" />
+        <Image h="6rem" borderRadius="xl" src="/assets/clubs/spark.png" />
+        <Image h="100px" borderRadius="xl" src="/assets/clubs/utmist.png" />
       </Flex>
     </Container>
   );

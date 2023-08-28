@@ -65,7 +65,7 @@ const Footer = () => {
               icon={<EmailIcon size="20" />}
             />
           </Link>
-          <Link href="https://www.google.ca" isExternal>
+          <Link href="/data/resume.pdf" isExternal>
             <IconButton
               as="div"
               borderRadius="full"

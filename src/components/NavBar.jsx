@@ -22,12 +22,13 @@ const NavBar = () => {
       position="fixed"
       w="100vw"
       bg="rgba(11, 17, 23, 0.87)"
+      backdropFilter="blur(20px)"
     >
       <Flex
         flex="row"
         justify="space-between"
         align="center"
-        px={{ base: "20px", md: "50px", xl: "70px", "2xl": "200px" }}
+        px={{ base: "10vw", md: "100px", xl: "120px", "2xl": "200px" }}
       >
         <Link
           fontSize={{ base: "lg", md: "2xl" }}
@@ -89,7 +90,7 @@ const NavBar = () => {
         </Box>
       </Flex>
       {hamburgerOpen ? (
-        <VStack centerContent py="20px">
+        <VStack py="20px">
           <Link
             fontSize={{ base: "lg", md: "xl" }}
             opacity="85%"
