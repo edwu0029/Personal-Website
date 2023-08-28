@@ -10,17 +10,7 @@ const ProjectDisplay = (props) => {
       justifyContent={{ base: "center", lg: "left" }}
     >
       {projects.map((p) => {
-        return (
-          <ProjectCard
-            key={p.title}
-            img={p.img}
-            title={p.title}
-            description={p.description}
-            backDescription={p.backDescription}
-            st={p.status}
-            tech={p.tech}
-          />
-        );
+        return <ProjectCard key={p.title} data={p} />;
       })}
     </Flex>
   );

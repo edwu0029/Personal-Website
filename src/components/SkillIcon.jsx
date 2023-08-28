@@ -11,7 +11,7 @@ const SkillIcon = (props) => {
     show: {
       x: 0,
       opacity: "100%",
-      transition: { duration: 0.2, delay: 0.3 * props.idx, ease: "easeOut" },
+      transition: { duration: 0.2, delay: 0.2 * props.idx, ease: "easeOut" },
     },
     hover: {
       y: "-0.3rem",

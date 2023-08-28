@@ -9,7 +9,7 @@ export const fadeIn = (dir) => {
       x: 0,
       y: 0,
       opacity: "100%",
-      transition: { duration: 1.5, ease: "easeOut" },
+      transition: { duration: 0.7, ease: "easeOut" },
     },
   };
 };

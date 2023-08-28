@@ -33,6 +33,7 @@ const NavBar = () => {
         <Link
           fontSize={{ base: "lg", md: "2xl" }}
           fontWeight="bold"
+          _hover={{ textDecoration: "none" }}
           href="/#home"
           py="16px"
         >

@@ -4,6 +4,7 @@ import {
   CardFooter,
   Button,
   Flex,
+  Link,
   Heading,
   Text,
   Image,
@@ -20,6 +21,7 @@ import { useState } from "react";
 import * as Consts from "../data/constants.js";
 
 const ProjectCard = (props) => {
+  const data = props.data;
   const [isFront, setIsFront] = useState(true);
   const variants = {
     intial: {
@@ -48,7 +50,7 @@ const ProjectCard = (props) => {
       animate={isFront ? "intial" : "flip"}
       variants={variants}
       maxW={{ base: "100%", sm: "280px", "2xl": "sm" }}
-      h="500px"
+      minH="490px"
       whileHover="hover"
       boxShadow="0 0 20px black"
     >
@@ -56,32 +58,34 @@ const ProjectCard = (props) => {
         // Front side of Project Card
         <CardBody p="15px 15px 10px 15px">
           <Image
-            src={props.img}
-            alt="temporary project display image"
-            objectFit="contain"
+            src={data.img}
+            objectFit="cover"
+            w="100%"
+            aspectRatio="16/9"
             borderRadius="lg"
+            maxH="200px"
             mx="auto"
           />
           <Flex direction="column" justifyContent="center" alignItems="left">
             <HStack justifyContent="space-between">
-              <Heading size="lg" mt="2" color="white">
-                {props.title}
+              <Heading fontSize="28px" mt="2" color="white">
+                {data.title}
               </Heading>
-              {props.st === "ongoing" ? (
-                <Badge colorScheme="red" mt="10px">
-                  Ongoing
-                </Badge>
-              ) : (
-                <Badge colorScheme="green" mt="10px">
-                  Completed
-                </Badge>
-              )}
             </HStack>
+            {data.status === "ongoing" ? (
+              <Badge colorScheme="red" mt="10px" maxW="66px">
+                Ongoing
+              </Badge>
+            ) : (
+              <Badge colorScheme="green" mt="10px" maxW="78px">
+                Completed
+              </Badge>
+            )}
             <Text mt="2" sx={Consts.bodyTextStyle}>
-              {props.description}
+              {data.description}
             </Text>
             <HStack mt="2" justifyContent="Left" wrap="wrap" gap="1.5">
-              {props.tech.map((t) => {
+              {data.tech.map((t) => {
                 return <TechIcon key={t} techName={t} />;
               })}
             </HStack>
@@ -93,7 +97,7 @@ const ProjectCard = (props) => {
           <Flex direction="column" justifyContent="center" alignItems="left">
             <HStack justifyContent="space-between">
               <Heading size="lg" mt="2" color="white">
-                {props.title}
+                {data.title}
               </Heading>
               <IconButton
                 icon={<HiSwitchHorizontal size={30} />}
@@ -104,10 +108,10 @@ const ProjectCard = (props) => {
               />
             </HStack>
             <Text mt="2" sx={Consts.bodyTextStyle}>
-              {props.backDescription}
+              {data.backDescription}
             </Text>
-            <HStack mt="2" justifyContent="Left" wrap="wrap" gap="1.5">
-              {props.tech.map((t) => {
+            <HStack mt="16px" justifyContent="Left" wrap="wrap" gap="1.5">
+              {data.tech.map((t) => {
                 return <TechIcon key={t} techName={t} />;
               })}
             </HStack>
@@ -127,22 +131,34 @@ const ProjectCard = (props) => {
           </Button>
         ) : (
           <HStack w="100%" transform="rotateY(180deg)">
-            <Button
-              leftIcon={<LuRocket size={20} />}
-              variant="solid"
-              colorScheme="blue"
-              w="100%"
-            >
-              Live
-            </Button>
-            <Button
-              leftIcon={<AiFillGithub size={20} />}
-              colorScheme="blue"
-              variant="solid"
-              w="100%"
-            >
-              Source
-            </Button>
+            {data.live != undefined ? (
+              <Link w="100%" href={data.live.url} isExternal>
+                <Button
+                  leftIcon={<LuRocket size={20} />}
+                  variant="solid"
+                  colorScheme="blue"
+                  w="100%"
+                >
+                  Live
+                </Button>
+              </Link>
+            ) : (
+              ""
+            )}
+            {data.source != undefined ? (
+              <Link w="100%" href={data.source.url} isExternal>
+                <Button
+                  leftIcon={<AiFillGithub size={20} />}
+                  colorScheme="blue"
+                  variant="solid"
+                  w="100%"
+                >
+                  Source
+                </Button>
+              </Link>
+            ) : (
+              ""
+            )}
           </HStack>
         )}
       </CardFooter>

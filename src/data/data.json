@@ -3,7 +3,7 @@
     "github": "https://github.com/edwu0029",
     "linkedin": "https://www.linkedin.com/in/edwu0029/",
     "email": "edwardwu0029@gmail.com",
-    "resume": "/data/resume.pdf",
+    "resume": "/resume.pdf",
     "instagram": "https://www.instagram.com/edwardwu.29/"
   },
   "education": {
@@ -62,11 +62,39 @@
     "projects_data": [
       {
         "title": "PaintBoard",
-        "img": "/assets/projects/projectDisplayTMP.jpg",
-        "description": "An education application that provides a collaborative environment to draw and write on a single canvas.",
-        "backDescription": " education application that provides a collaborative environment to draw and write on a single canvas.",
+        "img": "/assets/projects_thumbnails/paintboard.png",
+        "description": "An education-focused application that provides a collaborative environment to draw and write on a single canvas.",
+        "backDescription": "Built using Java Sockets and the Java Swing GUI library. Along with a collaborative canvas, PaintBoard also includes a chat stream where all users can communicate via messaging.",
         "status": "completed",
-        "tech": ["java", "GUI"]
+        "tech": ["java", "GUI"],
+        "source": {
+          "url": "https://github.com/edwu0029/PaintBoard"
+        }
+      },
+      {
+        "title": "Competitive Programming",
+        "img": "/assets/projects_thumbnails/competitiveprogramming.png",
+        "description": "A collection of my competitive programming solutions to various problems from CCC, DMOJ, Codeforces, and more!",
+        "backDescription": "This collection contains solutions to problems of a wide variety, from classical problems, dynamic programming, graph theory, and much more! Each problem has it's unique constraints and challenges for a unique solution.",
+        "status": "ongoing",
+        "tech": ["c++", "java", "python", "DSA"],
+        "source": {
+          "url": "https://github.com/edwu0029/Personal-Website"
+        }
+      },
+      {
+        "title": "Personal Site",
+        "img": "/assets/projects_thumbnails/personalsite.jpg",
+        "description": "This website right now! A portfolio website that showcases my skills and projects with responsive design.",
+        "backDescription": "Built using React, Chakra UI, and Framer Motion. The website follows responsive web design and functions on screens for desktops, tablets, and mobile devices alike.",
+        "status": "ongoing",
+        "tech": ["react", "chakra ui", "html", "css", "javascript"],
+        "live": {
+          "url": "https://edwardwu.dev"
+        },
+        "source": {
+          "url": "https://github.com/edwu0029/Personal-Website"
+        }
       }
     ]
   }
