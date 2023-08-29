@@ -1,18 +1,11 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  Text,
-  Link,
-  HStack,
-} from "@chakra-ui/react";
+import { Box, Container, Heading, Text, Link, HStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import * as Consts from "../data/constants.js";
 import { fadeIn } from "../utils/animations";
 import { EmailIcon, CalendarIcon } from "@chakra-ui/icons";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 const Contact = (props) => {
+  const textStyle = { opacity: "85%", fontSize: "md" };
   const data = props.data;
   return (
     <Container
@@ -56,21 +49,21 @@ const Contact = (props) => {
             <EmailIcon />
             <Text>Email:</Text>
           </HStack>
-          <Text sx={Consts.bodyTextStyle}>edwardwu0029 at gmail dot com</Text>
+          <Text sx={textStyle}>edwardwu0029 at gmail dot com</Text>
         </HStack>
         <HStack>
           <HStack as="div" color="blue.200">
             <CalendarIcon />
             <Text>In-Person:</Text>
           </HStack>
-          <Text sx={Consts.bodyTextStyle}>Greater Toronto Area</Text>
+          <Text sx={textStyle}>Greater Toronto Area</Text>
         </HStack>
         <HStack>
           <HStack as="div" color="blue.200">
             <FaLinkedinIn />
             <Text>LinkedIn:</Text>
           </HStack>
-          <Link sx={Consts.bodyTextStyle} href={data.urls.linkedin} isExternal>
+          <Link sx={textStyle} href={data.urls.linkedin} isExternal>
             Edward Wu
           </Link>
         </HStack>
@@ -79,7 +72,7 @@ const Contact = (props) => {
             <FaInstagram />
             <Text>Instagram:</Text>
           </HStack>
-          <Link sx={Consts.bodyTextStyle} href={data.urls.instagram} isExternal>
+          <Link sx={textStyle} href={data.urls.instagram} isExternal>
             @edwardwu.29
           </Link>
         </HStack>
