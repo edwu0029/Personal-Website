@@ -80,7 +80,7 @@ const Home = (props) => {
             h="40px"
             letterSpacing="wide"
           >
-            Software Engineer
+            Computer Engineer
           </Text>
           <Flex mt="12px" gap="3">
             <Link href={data.urls.linkedin} isExternal>
