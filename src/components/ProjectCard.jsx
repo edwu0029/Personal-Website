@@ -13,7 +13,7 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { AiFillGithub } from "react-icons/ai";
+import { FaGithub } from "react-icons/fa";
 import { LuRocket } from "react-icons/lu";
 import { HiSwitchHorizontal } from "react-icons/hi";
 import TechIcon from "./TechIcon";
@@ -131,29 +131,29 @@ const ProjectCard = (props) => {
           </Button>
         ) : (
           <HStack w="100%" transform="rotateY(180deg)">
-            {data.live != undefined ? (
-              <Link w="100%" href={data.live.url} isExternal>
-                <Button
-                  leftIcon={<LuRocket size={20} />}
-                  variant="solid"
-                  colorScheme="blue"
-                  w="100%"
-                >
-                  Live
-                </Button>
-              </Link>
-            ) : (
-              ""
-            )}
             {data.source != undefined ? (
               <Link w="100%" href={data.source.url} isExternal>
                 <Button
-                  leftIcon={<AiFillGithub size={20} />}
+                  leftIcon={<FaGithub size={20} />}
                   colorScheme="blue"
                   variant="solid"
                   w="100%"
                 >
                   Source
+                </Button>
+              </Link>
+            ) : (
+              ""
+            )}
+            {data.live != undefined ? (
+              <Link w="100%" href={data.live.url} isExternal>
+                <Button
+                  leftIcon={<LuRocket size={20} />}
+                  colorScheme="blue"
+                  variant="outline"
+                  w="100%"
+                >
+                  Live
                 </Button>
               </Link>
             ) : (
