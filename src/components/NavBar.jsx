@@ -34,7 +34,7 @@ const NavBar = () => {
           fontSize={{ base: "lg", md: "2xl" }}
           fontWeight="bold"
           _hover={{ textDecoration: "none" }}
-          href="/#home"
+          href="/#"
           py="16px"
         >
           edwardwu.
