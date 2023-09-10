@@ -35,7 +35,7 @@ const Footer = () => {
           fontSize="2xl"
           fontWeight="bold"
           _hover={{ opacity: "100%" }}
-          href="/#"
+          href="/#home"
         >
           edwardwu.
         </Link>
