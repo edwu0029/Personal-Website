@@ -3,14 +3,17 @@ import ProjectDisplay from "../components/ProjectDisplay";
 import * as Consts from "../data/constants.js";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/animations";
+import { forwardRef } from "react";
 
-const Projects = (props) => {
+const Projects = forwardRef(function Projects(props, ref) {
   const projectsData = props.data.projects.projects_data;
   return (
     <Container
+      ref={ref}
       as={motion.section}
       p="20px"
       pt="80px"
+      pb="15vh"
       maxW={{
         base: "100%",
         md: "container.sm",
@@ -18,7 +21,6 @@ const Projects = (props) => {
         xl: "container.lg",
         "2xl": "container.xl",
       }}
-      mb="10vh"
       id="projects"
     >
       <Box
@@ -52,5 +54,5 @@ const Projects = (props) => {
       </Box>
     </Container>
   );
-};
+});
 export default Projects;

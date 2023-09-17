@@ -14,8 +14,9 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../utils/animations.js";
 import { AttachmentIcon } from "@chakra-ui/icons";
 import { FaGithub } from "react-icons/fa";
+import { forwardRef } from "react";
 
-const About = (props) => {
+const About = forwardRef(function About(props, ref) {
   const data = props.data;
   const aboutData = props.data.about;
   const variants = {
@@ -28,9 +29,11 @@ const About = (props) => {
   };
   return (
     <Container
+      ref={ref}
       as={motion.section}
       p="20px"
       pt="80px"
+      pb="10vh"
       maxW={{
         base: "100%",
         md: "container.sm",
@@ -38,7 +41,6 @@ const About = (props) => {
         xl: "container.lg",
         "2xl": "container.xl",
       }}
-      mb="10vh"
       id="about"
     >
       <Heading
@@ -174,5 +176,5 @@ const About = (props) => {
       <SkillDisplay skills={aboutData.skills.tools} />
     </Container>
   );
-};
+});
 export default About;

@@ -4,13 +4,16 @@ import * as Consts from "../data/constants.js";
 import { fadeIn } from "../utils/animations";
 import { EmailIcon, CalendarIcon } from "@chakra-ui/icons";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
-const Contact = (props) => {
+import { forwardRef } from "react";
+const Contact = forwardRef(function Contact(props, ref) {
   const textStyle = { opacity: "85%", fontSize: "md" };
   const data = props.data;
   return (
     <Container
+      ref={ref}
       as={motion.section}
       p="20px"
+      pb="30vh"
       maxW={{
         base: "100%",
         md: "container.sm",
@@ -19,7 +22,6 @@ const Contact = (props) => {
         "2xl": "container.xl",
       }}
       textAlign={{ base: "center", sm: "left" }}
-      mb="10vh"
       id="contact"
     >
       <Box
@@ -79,5 +81,5 @@ const Contact = (props) => {
       </Box>
     </Container>
   );
-};
+});
 export default Contact;

@@ -88,7 +88,7 @@
         "description": "This website right now! A portfolio website that showcases my skills and projects with responsive design.",
         "backDescription": "Built using React, Chakra UI, and Framer Motion. The website follows responsive web design and functions on screens for desktops, tablets, and mobile devices alike.",
         "status": "ongoing",
-        "tech": ["react", "chakra ui", "html", "css", "javascript"],
+        "tech": ["react", "chakra ui", "html", "css"],
         "live": {
           "url": "https://edwardwu.dev"
         },

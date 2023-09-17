@@ -11,13 +11,16 @@ import * as Consts from "../data/constants.js";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/animations.js";
-const Education = (props) => {
+import { forwardRef } from "react";
+const Education = forwardRef(function Education(props, ref) {
   const educationData = props.data.education;
   return (
     <Container
+      ref={ref}
       as={motion.section}
       p="20px"
       pt="80px"
+      pb="15vh"
       maxW={{
         base: "100%",
         md: "container.sm",
@@ -25,7 +28,6 @@ const Education = (props) => {
         xl: "container.lg",
         "2xl": "container.xl",
       }}
-      mb="10vh"
       id="education"
     >
       <Box
@@ -99,5 +101,5 @@ const Education = (props) => {
       </Flex>
     </Container>
   );
-};
+});
 export default Education;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -10,8 +10,48 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const nearestSection = (pos, sectionRefs) => {
+    //Check contact, the last section first due to its short length
+    const contact = sectionRefs[sectionRefs.length - 1].sectionRef;
+    if (
+      pos + contact.current.clientHeight + 200 >=
+      document.documentElement.scrollHeight
+    ) {
+      return "contact";
+    }
+
+    //Otherwise, check all sections
+    for (let i = 0; i < sectionRefs.length; i++) {
+      const ref = sectionRefs[i].sectionRef;
+      if (
+        sectionRefs[i].sectionRef.current.offsetTop - window.innerHeight / 8 <=
+          pos &&
+        pos <=
+          sectionRefs[i].sectionRef.current.offsetTop +
+            sectionRefs[i].sectionRef.current.clientHeight -
+            window.innerHeight / 8
+      ) {
+        return sectionRefs[i].sectionName;
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = (e) => {
+      setActiveSection(
+        nearestSection(window.scrollY, props.sectionRefGetter())
+      );
+    };
+
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const handleHamburgerClick = () => {
     setHamburgerOpen((prev) => !prev);
   };
@@ -47,7 +87,7 @@ const NavBar = () => {
         >
           <Link
             fontSize={{ base: "lg", md: "xl" }}
-            opacity="85%"
+            opacity={activeSection == "about" ? "100%" : "70%"}
             fontWeight="500"
             _hover={{ opacity: "100%" }}
             href="/#about"
@@ -56,7 +96,7 @@ const NavBar = () => {
           </Link>
           <Link
             fontSize={{ base: "lg", md: "xl" }}
-            opacity="85%"
+            opacity={activeSection == "education" ? "100%" : "70%"}
             fontWeight="500"
             _hover={{ opacity: "100%" }}
             href="/#education"
@@ -65,7 +105,7 @@ const NavBar = () => {
           </Link>
           <Link
             fontSize={{ base: "lg", md: "xl" }}
-            opacity="85%"
+            opacity={activeSection == "projects" ? "100%" : "70%"}
             fontWeight="500"
             _hover={{ opacity: "100%" }}
             href="/#projects"
@@ -74,7 +114,7 @@ const NavBar = () => {
           </Link>
           <Link
             fontSize={{ base: "lg", md: "xl" }}
-            opacity="85%"
+            opacity={activeSection == "contact" ? "100%" : "70%"}
             fontWeight="500"
             _hover={{ opacity: "100%" }}
             href="#contact"
