@@ -12,6 +12,7 @@ import { FaGithub } from "react-icons/fa";
 import { EmailIcon, AttachmentIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/animations";
+import ScrollDownIcon from "../components/ScrollDownIcon";
 const Home = (props) => {
   const data = props.data;
   const lineAnimate = {
@@ -117,6 +118,9 @@ const Home = (props) => {
             </Link>
           </Flex>
         </Box>
+      </Flex>
+      <Flex justify="center" pt="15%">
+        <ScrollDownIcon />
       </Flex>
     </Container>
   );

@@ -6,6 +6,7 @@ const SkillDisplay = (props) => {
     <Flex
       as={motion.div}
       gap="8"
+      px={{ base: "5%", sm: "0" }}
       justifyContent={{ base: "center", sm: "left" }}
       wrap="wrap"
     >

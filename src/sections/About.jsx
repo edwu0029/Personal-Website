@@ -87,15 +87,24 @@ const About = forwardRef(function About(props, ref) {
             , a second year Computer Engineering student at the University of
             Toronto, based out of Toronto, ON. Whether it's tinkering with
             circuits or coding prototype apps, I'm always passionately building
-            new things and learning along the way!
+            new things and learning along the way! As a computer engineer, my
+            interests lie in both software and hardware:
           </Text>
           <Text>
             <Text as="b" fontSize="lg" color="blue.300" opacity="100%">
-              Interested In:{" "}
+              On Software Side:{" "}
             </Text>
             <Text as="span" sx={Consts.bodyTextStyle}>
-              Full-Stack Development, Artifical Intelligence, Computer
-              Architecture, and System Software
+              Artifical Intelligence, Full-Stack development, System Software,
+              Firmware
+            </Text>
+          </Text>
+          <Text mt="12px">
+            <Text as="b" fontSize="lg" color="blue.300" opacity="100%">
+              On Hardware Side:{" "}
+            </Text>
+            <Text as="span" sx={Consts.bodyTextStyle}>
+              Computer Architecture, Embedded Systems
             </Text>
           </Text>
           <Text mt="12px">
