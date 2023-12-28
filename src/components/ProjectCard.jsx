@@ -73,11 +73,16 @@ const ProjectCard = (props) => {
               </Heading>
             </HStack>
             {data.status === "ongoing" ? (
-              <Badge colorScheme="red" mt="10px" maxW="66px">
+              <Badge colorScheme="red" mt="10px" maxW="72px" textAlign="center">
                 Ongoing
               </Badge>
             ) : (
-              <Badge colorScheme="green" mt="10px" maxW="78px">
+              <Badge
+                colorScheme="green"
+                mt="10px"
+                maxW="87px"
+                textAlign="center"
+              >
                 Completed
               </Badge>
             )}
