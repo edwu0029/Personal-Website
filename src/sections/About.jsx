@@ -84,27 +84,27 @@ const About = forwardRef(function About(props, ref) {
             <Text as="b" color="blue.300">
               Edward Wu
             </Text>
-            , a second year Computer Engineering student at the University of
-            Toronto, based out of Toronto, ON. Whether it's tinkering with
-            circuits or coding prototype apps, I'm always passionately building
-            new things and learning along the way! As a computer engineer, my
+            , a second-year computer engineering student at the University of
+            Toronto based in Toronto, ON. Whether it's tinkering with circuits
+            or coding prototype apps, I'm always passionately building new
+            things and learning along the way! As a Computer Engineer, my
             interests lie in both software and hardware:
           </Text>
           <Text>
             <Text as="b" fontSize="lg" color="blue.300" opacity="100%">
-              On Software Side:{" "}
+              On the Software Side:{" "}
             </Text>
             <Text as="span" sx={Consts.bodyTextStyle}>
-              Artifical Intelligence, Full-Stack development, System Software,
-              Firmware
+              Artificial Intelligence, Full-Stack development, System Software,
+              and Firmware
             </Text>
           </Text>
           <Text mt="12px">
             <Text as="b" fontSize="lg" color="blue.300" opacity="100%">
-              On Hardware Side:{" "}
+              On the Hardware Side:{" "}
             </Text>
             <Text as="span" sx={Consts.bodyTextStyle}>
-              Computer Architecture, Embedded Systems
+              Computer Architecture and Embedded Systems
             </Text>
           </Text>
           <Text mt="12px">
@@ -112,7 +112,7 @@ const About = forwardRef(function About(props, ref) {
               Hobbies:{" "}
             </Text>
             <Text as="span" sx={Consts.bodyTextStyle}>
-              Basketball, Gaming, Hiking, Coding
+              Basketball, MMA, Hiking, and Coding
             </Text>
           </Text>
           <Flex flexDirection="row" gap="5">
@@ -130,7 +130,7 @@ const About = forwardRef(function About(props, ref) {
                 variant="solid"
                 leftIcon={<AttachmentIcon />}
               >
-                Resume
+                Resumé
               </Button>
             </Link>
             <Link

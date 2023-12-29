@@ -51,7 +51,7 @@ const Contact = forwardRef(function Contact(props, ref) {
             <EmailIcon />
             <Text>Email:</Text>
           </HStack>
-          <Text sx={textStyle}>edwardwu0029 at gmail dot com</Text>
+          <Text sx={textStyle}>edwardwu.wu [at] mail.utoronto.ca</Text>
         </HStack>
         <HStack>
           <HStack as="div" color="blue.200">

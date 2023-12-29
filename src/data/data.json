@@ -2,7 +2,7 @@
   "urls": {
     "github": "https://github.com/edwu0029",
     "linkedin": "https://www.linkedin.com/in/edwu0029/",
-    "email": "edwardwu0029@gmail.com",
+    "email": "edwardwu.wu@mail.utoronto.ca",
     "resume": "/Edward_Wu_Resume.pdf",
     "instagram": "https://www.instagram.com/edwardwu.29/"
   },
@@ -88,7 +88,7 @@
         "description": "This website right now! A portfolio website that showcases my skills and projects with responsive design.",
         "backDescription": "Built using React, Chakra UI, and Framer Motion. The website follows responsive web design and functions on screens for desktops, tablets, and mobile devices alike.",
         "status": "ongoing",
-        "tech": ["react", "chakra ui", "html", "css"],
+        "tech": ["react", "chakraUI", "html", "css"],
         "live": {
           "url": "https://edwardwu.dev"
         },
